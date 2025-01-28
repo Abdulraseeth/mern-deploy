@@ -14,6 +14,10 @@ app.use(express.urlencoded({extended: false}));
 // routes
 app.use("/api/products", productRoute);
 
+api.get("/", (req,res) => {
+  res.json("Hello")
+})
+
 mongoose
   .connect(
 "mongodb+srv://abdulraseeth04:4djyXUKOgj2eOcTC@backenddb.j30zj.mongodb.net/?retryWrites=true&w=majority&appName=BackendDB"
